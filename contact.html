@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+		<title>contact</title>
+
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+		<!--[if lt IE 9]>
+	    	<script src="js/html5shiv.min.js"></script>
+	    	<script src="js/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+
+	<body data-spy='scroll' data-target='#nav-one'>
+
+		<header id="nav-one" class="nav-one" data-offset-top='90'>
+			<div class="navbar navbar-default">
+				<div class="container only1">
+
+					<div class="navbar-header">
+
+						<a href="index.html" class="navbar-brand"></a>
+						<button type="button" class="navbar-toggle" data-toggle='collapse' data-target='#Onav'>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+					</div>
+					<div id="Onav" class="navbar-collapse collapse navbar-right">
+						<ul class="nav navbar-nav">
+							<li><a href="case.html">案例</a></li>
+							<li><a href="seive.html">产品</a></li>
+							<li><a href="about.html">我们</a></li>
+							<li class="active"><a href="contact.html">关联</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</header>
+		
+		
+		<div class="contact-ban">
+			<div class="ban-bg">
+				<div class="contact-ban-pic">
+					<img src="img/contact/get-in-touch.png"/>
+				</div>
+			</div>
+		</div>
+		
+		<div class="contact-map">
+			
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+						<div class="contact-map-pic">
+							<img src="img/contact/zh-map.jpg" />
+						</div>
+					</div>
+					<div class="col-sm-5 col-xs-10 col-xs-offset-1">
+						<div>
+							<div class="phone">
+								<h1>
+									<span></span>025-66652273
+								</h1>
+								
+							</div>
+							<div class="text-group clearfix">
+								<p id="icon-web">
+									<a href="#">hello@enqoo.com</a>
+								</p>
+								<p id="icon-qq">
+									<a href="#">908918366</a>
+								</p>
+							</div>
+							<p id="icon-site">
+								<a href="#">南京软件园孵鹰大厦D座4楼</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="container">
+				<div class="clearfix">
+					<div class="firendlink">
+						<ul class="clearfix">
+							<li>
+								<a href="#">联络</a>
+							</li>
+							<li>
+								<a href="#">联络</a>
+							</li>
+							<li>
+								<a href="#">联络</a>
+							</li>
+							<li>
+								<a href="#">联络</a>
+							</li>
+						</ul>
+					</div>
+					<div class="language">
+						<a href="#">中文</a>
+						<a href="#">EN</a>
+					</div>
+				</div>
+				<div class="copy">
+					<p>
+						&copy; 2018 Enqoo Inc.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+	<script type="text/javascript">
+//		(function() {
+//			var s = document.createElement('script');
+//			s.onload = function() {
+//				bootlint.showLintReportForCurrentDocument([]);
+//			};
+//			s.src = 'js/bootlint.min.js';
+//			document.body.appendChild(s);
+//		})();
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			var w = null;
+			
+			w = $(window).innerWidth();
+			$(window).resize(function(){
+				return w = $(window).innerWidth();
+			});
+			
+			console.log(w);
+			
+			$(window).scroll(function(){
+				
+				if(w > 767){
+				
+					if($(window).scrollTop() > 90){
+					
+						$('.nav-one ul li a').css(
+							'line-height','58px'
+						);
+						$('.nav-one ul li a').addClass('li-after');
+						$('.nav-one .navbar').css('height','58px');
+						$('.nav-one .navbar-brand').css({
+							'width': '130px',
+							'height': '38px',
+							'margin-top': '10px',
+							'margin-bottom':'10px'
+						});
+						$('.nav-one .container').removeClass('only1');
+					
+					}
+					else{
+						
+						$('.nav-one ul li a').css(
+							'line-height','90px'
+						);
+						$('.nav-one ul li a').removeClass('li-after');
+						$('.nav-one .navbar').css('height','90px');
+						$('.nav-one .navbar-brand').css({
+							'width': '180px',
+							'height': '54px',
+							'margin-top': '18px',
+							'margin-bottom':'18px',
+						});
+						$('.nav-one .container').addClass('only1');
+					}
+				}
+			
+				if ($(window).scrollTop() > 90) {
+					$('.nav-one .navbar').css('box-shadow','none');
+				} else{
+					$('.nav-one .navbar').css('box-shadow','0 4px 8px #eee');
+				}
+			
+			
+			
+			})
+			
+		})
+	</script>
+
+</html>
